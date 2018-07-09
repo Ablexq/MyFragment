@@ -59,7 +59,7 @@ public class ViewPagerActivity extends AppCompatActivity implements View.OnClick
         fragments.add(new Fragment3());
         fragments.add(new Fragment4());
         mViewPager = ((ViewPager) findViewById(R.id.viewpager));
-        mViewPager.setOffscreenPageLimit(4);
+        mViewPager.setOffscreenPageLimit(1);
         mViewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {

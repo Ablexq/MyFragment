@@ -100,4 +100,4 @@ Fragment2============6===onResume===============
 Fragment3============6===onResume===============
 Fragment4============6===onResume===============
 
-
+<font color="#00ff00">结论：setOffscreenPageLimit 与 懒加载 影响走 onResume 的fragment个数
