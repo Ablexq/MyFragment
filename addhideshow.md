@@ -2,7 +2,7 @@
 add、hide、show
 --------------
 
-<font color="#ff0000">1、切换tab
+<font color="#ff0000">1、切换tab</font>
 
 Fragment1============1===onAttach===============
 Fragment1============2===onCreate===============
@@ -63,9 +63,9 @@ fragment===============Fragment3{9272f67 #2 id=0x7f0b006a}
 Fragment3============-1===onHiddenChanged===============true
 Fragment4============-1===onHiddenChanged===============false
 
-<font color="#00ff00">结论：初始化后点击tab切换 只调用onHiddenChanged方法
+<font color="#00ff00">结论：初始化后点击tab切换 只调用onHiddenChanged方法</font>
 
-<font color="#ff0000">2、点击只加载一个页面，详情后返回
+<font color="#ff0000">2、点击只加载一个页面，详情后返回</font>
 
 //进入界面
 
@@ -88,7 +88,7 @@ Fragment1============6===onResume===============
 
 
 
-<font color="#ff0000">3、点击加载过四个界面：点击详情后返回
+<font color="#ff0000">3、点击加载过四个界面：点击详情后返回</font>
 
 Fragment1============1===onAttach===============
 Fragment1============2===onCreate===============
@@ -194,5 +194,5 @@ Fragment2============6===onResume===============
 Fragment3============6===onResume===============
 Fragment4============6===onResume===============
 
-<font color="#00ff00">结论：详情返回都走一遍onPause、onStop、onStart、onResume
+<font color="#00ff00">结论：详情返回都走一遍onPause、onStop、onStart、onResume</font>
 
