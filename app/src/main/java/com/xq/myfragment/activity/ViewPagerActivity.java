@@ -102,6 +102,7 @@ public class ViewPagerActivity extends AppCompatActivity implements View.OnClick
                 home_tab_four_iconIv.setBackgroundResource(R.drawable.frag4_one);
                 home_tab_four_textTv.setTextColor(Color.parseColor("#b5bbca"));
                 break;
+
             case 1:
                 home_tab_one_iconIv.setBackgroundResource(R.drawable.frag1_one);
                 home_tab_one_textTv.setTextColor(Color.parseColor("#b5bbca"));
@@ -112,6 +113,7 @@ public class ViewPagerActivity extends AppCompatActivity implements View.OnClick
                 home_tab_four_iconIv.setBackgroundResource(R.drawable.frag4_one);
                 home_tab_four_textTv.setTextColor(Color.parseColor("#b5bbca"));
                 break;
+
             case 2:
                 home_tab_one_iconIv.setBackgroundResource(R.drawable.frag1_one);
                 home_tab_one_textTv.setTextColor(Color.parseColor("#b5bbca"));
@@ -122,6 +124,7 @@ public class ViewPagerActivity extends AppCompatActivity implements View.OnClick
                 home_tab_four_iconIv.setBackgroundResource(R.drawable.frag4_one);
                 home_tab_four_textTv.setTextColor(Color.parseColor("#b5bbca"));
                 break;
+
             case 3:
                 home_tab_one_iconIv.setBackgroundResource(R.drawable.frag1_one);
                 home_tab_one_textTv.setTextColor(Color.parseColor("#b5bbca"));

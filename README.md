@@ -1,7 +1,11 @@
 
 [viewpager](https://github.com/Ablexq/MyFragment/blob/master/viewpager.md)
+
 [addhideshow](https://github.com/Ablexq/MyFragment/blob/master/addhideshow.md)
+
 [replace](https://github.com/Ablexq/MyFragment/blob/master/replace.md)
+
+[PagerAdapter区别](https://github.com/Ablexq/MyFragment/blob/master/PagerAdapter.md)
 
 
 ```

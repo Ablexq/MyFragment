@@ -3,10 +3,9 @@ package com.xq.myfragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
+import android.widget.TextView;
 
-/**
- * Created by lenovo on 2018/7/4.
- */
 
 public class DetailActivity extends AppCompatActivity {
 
