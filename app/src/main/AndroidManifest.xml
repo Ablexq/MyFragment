@@ -20,6 +20,7 @@
         <activity android:name=".activity.ReplaceActivity" />
         <activity android:name=".activity.HideShowActivity" />
         <activity android:name=".activity.ViewPagerActivity" />
+        <activity android:name=".TabVpActivity" />
         <activity android:name=".DetailActivity" />
     </application>
 

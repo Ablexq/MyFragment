@@ -20,9 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView mTv1 = ((TextView) this.findViewById(R.id.tv1));
         TextView mTv2 = ((TextView) this.findViewById(R.id.tv2));
         TextView mTv3 = ((TextView) this.findViewById(R.id.tv3));
+        TextView mTv4 = ((TextView) this.findViewById(R.id.tv4));
         mTv1.setOnClickListener(this);
         mTv2.setOnClickListener(this);
         mTv3.setOnClickListener(this);
+        mTv4.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv3:
                 startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
+                break;
+
+            case R.id.tv4:
+                startActivity(new Intent(MainActivity.this, TabVpActivity.class));
                 break;
             default:
                 break;
