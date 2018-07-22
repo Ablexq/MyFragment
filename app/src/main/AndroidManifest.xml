@@ -17,9 +17,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.ReplaceActivity" />
-        <activity android:name=".activity.HideShowActivity" />
-        <activity android:name=".activity.ViewPagerActivity" />
+        <activity android:name=".activity.replace.ReplaceActivity" />
+        <activity android:name=".activity.hideshow.HideShowActivity" />
+        <activity android:name=".activity.hideshow2.HideShowActivity2" />
+        <activity android:name=".activity.viewpager.ViewPagerActivity" />
+        <activity android:name=".activity.viewpager2.ViewPagerActivity2" />
         <activity android:name=".TabVpActivity" />
         <activity android:name=".DetailActivity" />
     </application>

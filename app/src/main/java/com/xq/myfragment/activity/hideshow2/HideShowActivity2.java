@@ -1,4 +1,4 @@
-package com.xq.myfragment.activity;
+package com.xq.myfragment.activity.hideshow2;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,14 +12,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xq.myfragment.R;
-import com.xq.myfragment.fragment.Fragment1;
-import com.xq.myfragment.fragment.Fragment2;
-import com.xq.myfragment.fragment.Fragment3;
-import com.xq.myfragment.fragment.Fragment4;
 
 import java.util.List;
 
-public class HideShowActivity extends AppCompatActivity implements View.OnClickListener {
+public class HideShowActivity2 extends AppCompatActivity implements View.OnClickListener {
 
     private Fragment targetFrag;
     private Fragment1 fragment1;
@@ -36,6 +32,7 @@ public class HideShowActivity extends AppCompatActivity implements View.OnClickL
     private TextView home_tab_two_textTv;
     private TextView home_tab_three_textTv;
     private TextView home_tab_four_textTv;
+    public int tag = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +67,7 @@ public class HideShowActivity extends AppCompatActivity implements View.OnClickL
     public void setCurrentItem(int index) {
         if (mCurrentIndex != index) {
             mCurrentIndex = index;
+            tag = index;
 
             switch (mCurrentIndex) {
 

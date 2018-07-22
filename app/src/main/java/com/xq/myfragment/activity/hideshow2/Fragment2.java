@@ -1,4 +1,4 @@
-package com.xq.myfragment.fragment;
+package com.xq.myfragment.activity.hideshow2;
 
 import android.content.Context;
 import android.content.Intent;
@@ -101,11 +101,18 @@ public class Fragment2 extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        System.out.println("Fragment2============6===onResume===============");
-        System.out.println("Fragment2----1----onResume--------getUserVisibleHint----------" + getUserVisibleHint());
-        System.out.println("Fragment2----1----onResume--------isVisible----------" + isVisible());
-        System.out.println("Fragment2----1----onResume--------isHidden----------" + isHidden());
-        System.out.println("Fragment2----1----onResume--------isAdded----------" + isAdded());
+
+        HideShowActivity2 activity = (HideShowActivity2) getActivity();
+        if (activity != null) {
+            int tag = activity.tag;
+            if (tag == 1) {
+                System.out.println("Fragment2============6===onResume===============");
+                System.out.println("Fragment2----1----onResume--------getUserVisibleHint----------" + getUserVisibleHint());
+                System.out.println("Fragment2----1----onResume--------isVisible----------" + isVisible());
+                System.out.println("Fragment2----1----onResume--------isHidden----------" + isHidden());
+                System.out.println("Fragment2----1----onResume--------isAdded----------" + isAdded());
+            }
+        }
     }
 
     /*-------------------------------------------------------resumed-----------------------------------------------------*/

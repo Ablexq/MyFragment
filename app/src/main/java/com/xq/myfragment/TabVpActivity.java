@@ -9,10 +9,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.xq.myfragment.fragment.Fragment1;
-import com.xq.myfragment.fragment.Fragment2;
-import com.xq.myfragment.fragment.Fragment3;
-import com.xq.myfragment.fragment.Fragment4;
+import com.xq.myfragment.activity.hideshow.Fragment1;
+import com.xq.myfragment.activity.hideshow.Fragment2;
+import com.xq.myfragment.activity.hideshow.Fragment3;
+import com.xq.myfragment.activity.hideshow.Fragment4;
 
 
 public class TabVpActivity extends AppCompatActivity {

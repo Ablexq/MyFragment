@@ -1,4 +1,4 @@
-package com.xq.myfragment.activity;
+package com.xq.myfragment.activity.hideshow;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,15 +12,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xq.myfragment.R;
-import com.xq.myfragment.fragment.Fragment1;
-import com.xq.myfragment.fragment.Fragment2;
-import com.xq.myfragment.fragment.Fragment3;
-import com.xq.myfragment.fragment.Fragment4;
 
 import java.util.List;
 
-public class ReplaceActivity extends AppCompatActivity implements View.OnClickListener {
+public class HideShowActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Fragment targetFrag;
     private Fragment1 fragment1;
     private Fragment2 fragment2;
     private Fragment3 fragment3;
@@ -39,7 +36,7 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_replace_layout);
+        setContentView(R.layout.activity_hide_show_layout);
 
         LinearLayout oneLLayout = (LinearLayout) findViewById(R.id.home_tab_one);
         LinearLayout twoLLayout = (LinearLayout) findViewById(R.id.home_tab_two);
@@ -59,11 +56,11 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
         home_tab_four_textTv = (TextView) findViewById(R.id.home_tab_four_text);
 
         fragment1 = new Fragment1();
+        targetFrag = fragment1;
         manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.container, fragment1);
         transaction.commitAllowingStateLoss();
-
     }
 
     public void setCurrentItem(int index) {
@@ -76,7 +73,7 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
                     if (fragment1 == null) {
                         fragment1 = new Fragment1();
                     }
-                    switchContent(fragment1);
+                    switchContent(targetFrag, fragment1);
 
                     home_tab_one_iconIv.setBackgroundResource(R.drawable.frag1_two);
                     home_tab_one_textTv.setTextColor(Color.parseColor("#ff7612"));
@@ -86,13 +83,15 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
                     home_tab_three_textTv.setTextColor(Color.parseColor("#b5bbca"));
                     home_tab_four_iconIv.setBackgroundResource(R.drawable.frag4_one);
                     home_tab_four_textTv.setTextColor(Color.parseColor("#b5bbca"));
+
+                    getVisibleFragment();
                     break;
 
                 case 1:
                     if (fragment2 == null) {
                         fragment2 = new Fragment2();
                     }
-                    switchContent(fragment2);
+                    switchContent(targetFrag, fragment2);
 
                     home_tab_one_iconIv.setBackgroundResource(R.drawable.frag1_one);
                     home_tab_one_textTv.setTextColor(Color.parseColor("#b5bbca"));
@@ -102,13 +101,15 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
                     home_tab_three_textTv.setTextColor(Color.parseColor("#b5bbca"));
                     home_tab_four_iconIv.setBackgroundResource(R.drawable.frag4_one);
                     home_tab_four_textTv.setTextColor(Color.parseColor("#b5bbca"));
+
+                    getVisibleFragment();
                     break;
 
                 case 2:
                     if (fragment3 == null) {
                         fragment3 = new Fragment3();
                     }
-                    switchContent(fragment3);
+                    switchContent(targetFrag, fragment3);
 
                     home_tab_one_iconIv.setBackgroundResource(R.drawable.frag1_one);
                     home_tab_one_textTv.setTextColor(Color.parseColor("#b5bbca"));
@@ -118,13 +119,15 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
                     home_tab_three_textTv.setTextColor(Color.parseColor("#ff7612"));
                     home_tab_four_iconIv.setBackgroundResource(R.drawable.frag4_one);
                     home_tab_four_textTv.setTextColor(Color.parseColor("#b5bbca"));
+
+                    getVisibleFragment();
                     break;
 
                 case 3:
                     if (fragment4 == null) {
                         fragment4 = new Fragment4();
                     }
-                    switchContent(fragment4);
+                    switchContent(targetFrag, fragment4);
 
                     home_tab_one_iconIv.setBackgroundResource(R.drawable.frag1_one);
                     home_tab_one_textTv.setTextColor(Color.parseColor("#b5bbca"));
@@ -134,22 +137,32 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
                     home_tab_three_textTv.setTextColor(Color.parseColor("#b5bbca"));
                     home_tab_four_iconIv.setBackgroundResource(R.drawable.frag4_two);
                     home_tab_four_textTv.setTextColor(Color.parseColor("#ff7612"));
+
+                    getVisibleFragment();
                     break;
 
                 default:
                     break;
             }
+
         }
+
     }
 
-    private void switchContent(Fragment to) {
-        FragmentTransaction transaction = manager.beginTransaction();
+    private void switchContent(Fragment from, Fragment to) {
+        if (targetFrag != to) {
+            targetFrag = to;
 
-        if (!to.isAdded()) {
-            transaction.replace(R.id.container, to);
+            FragmentTransaction transaction = manager.beginTransaction();
+
+            if (!to.isAdded()) {
+                transaction.hide(from).add(R.id.container, to);
+            } else {
+                transaction.hide(from).show(to);
+            }
+
+            transaction.commitAllowingStateLoss();
         }
-
-        transaction.commitAllowingStateLoss();
     }
 
     @Override
@@ -174,8 +187,6 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
             default:
                 break;
         }
-
-        getVisibleFragment();
     }
 
     public Fragment getVisibleFragment() {
@@ -184,7 +195,7 @@ public class ReplaceActivity extends AppCompatActivity implements View.OnClickLi
         if (fragments != null && fragments.size() > 0) {
             for (int i = 0; i < fragments.size(); i++) {
                 Fragment fragment = fragments.get(i);
-                System.out.println("======================VisibleFragment===============" + fragments.get(i));
+                System.out.println("fragment===============" + fragments.get(i));
                 if (fragment != null && fragment.isVisible()) {
                     return fragment;
                 }

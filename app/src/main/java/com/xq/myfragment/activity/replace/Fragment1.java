@@ -1,4 +1,4 @@
-package com.xq.myfragment.fragment;
+package com.xq.myfragment.activity.replace;
 
 import android.content.Context;
 import android.content.Intent;

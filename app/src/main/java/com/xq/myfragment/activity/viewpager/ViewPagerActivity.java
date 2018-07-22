@@ -1,4 +1,4 @@
-package com.xq.myfragment.activity;
+package com.xq.myfragment.activity.viewpager;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,11 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xq.myfragment.R;
-import com.xq.myfragment.fragment.Fragment1;
-import com.xq.myfragment.fragment.Fragment2;
-import com.xq.myfragment.fragment.Fragment3;
-import com.xq.myfragment.fragment.Fragment4;
-
 import java.util.ArrayList;
 
 public class ViewPagerActivity extends AppCompatActivity implements View.OnClickListener {

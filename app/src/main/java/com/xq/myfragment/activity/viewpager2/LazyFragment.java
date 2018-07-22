@@ -1,4 +1,4 @@
-package com.xq.myfragment.fragment;
+package com.xq.myfragment.activity.viewpager2;
 
 import android.support.v4.app.Fragment;
 
