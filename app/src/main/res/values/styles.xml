@@ -15,4 +15,5 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:screenOrientation">portrait</item>
     </style>
+
 </resources>

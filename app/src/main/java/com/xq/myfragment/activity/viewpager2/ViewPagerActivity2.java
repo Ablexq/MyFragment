@@ -1,7 +1,9 @@
 package com.xq.myfragment.activity.viewpager2;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -28,6 +30,7 @@ public class ViewPagerActivity2 extends AppCompatActivity implements View.OnClic
     private ArrayList<Fragment> fragments = new ArrayList<>();
     private ViewPager mViewPager;
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

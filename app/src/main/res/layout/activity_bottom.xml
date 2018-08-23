@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/fenge"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/transparent"
+        app:itemTextColor="@color/bottomtxtcolor"
+        app:menu="@menu/menu" />
+</LinearLayout>
+
+<!--
+
+添加BottomNavigationView布局文件时候注意的事项:
+
+属性一: itemBackground 指定的是底部导航栏的背景颜色,默认是主题的颜色;
+属性二: itemIconTint   指定图片的颜色
+属性三: itemTextColor  指定文字的颜色
+属性四: menu           指定文字和图片
+
+-->

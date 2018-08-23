@@ -22,8 +22,10 @@
         <activity android:name=".activity.hideshow2.HideShowActivity2" />
         <activity android:name=".activity.viewpager.ViewPagerActivity" />
         <activity android:name=".activity.viewpager2.ViewPagerActivity2" />
-        <activity android:name=".TabVpActivity" />
+        <activity android:name=".activity.tabvp.TabVpActivity" />
         <activity android:name=".DetailActivity" />
+        <activity android:name=".activity.bottomnavi.BottomNavigationActivity" />
+        <activity android:name=".activity.radiogroup.RadioGroupActivity" />
     </application>
 
 </manifest>

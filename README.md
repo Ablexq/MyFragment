@@ -7,6 +7,9 @@
 
 [PagerAdapter区别](https://github.com/Ablexq/MyFragment/blob/master/PagerAdapter.md)
 
+[BottomNavigationView 的使用及遇到的坑](https://www.jianshu.com/p/2b5576931c16)
+
+[BottomNavigationView实现底部导航栏的实现(一)](https://blog.csdn.net/kunkun5love/article/details/79403203)
 
 ```
 
