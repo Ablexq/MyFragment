@@ -2,12 +2,14 @@ package com.xq.myfragment.activity.viewpager2;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xq.myfragment.DetailActivity;
@@ -76,6 +78,8 @@ public class Fragment4 extends LazyFragment {
         isPrepared=true;
 
         TextView textView = (TextView) view.findViewById(R.id.tv);
+        LinearLayout layout = (LinearLayout) view.findViewById(R.id.layout_frag_container);
+        layout.setBackgroundColor(Color.parseColor("#00ff00"));
         String msg = "Fragment4";
         textView.setText(msg);
         textView.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,6 @@
 package com.xq.myfragment.activity.viewpager2;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xq.myfragment.R;
+import com.xq.myfragment.activity.viewpager2.viewpager.ScaleInTransformer;
 
 import java.util.ArrayList;
 
@@ -58,7 +60,9 @@ public class ViewPagerActivity2 extends AppCompatActivity implements View.OnClic
         fragments.add(new Fragment3());
         fragments.add(new Fragment4());
         mViewPager = ((ViewPager) findViewById(R.id.viewpager));
-        mViewPager.setOffscreenPageLimit(1);
+        mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setPageMargin(dip2px(this, 20));
+        mViewPager.setPageTransformer(true, new ScaleInTransformer());
         mViewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
@@ -87,6 +91,11 @@ public class ViewPagerActivity2 extends AppCompatActivity implements View.OnClic
             }
         });
 
+    }
+
+    public int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 
     private void switchPage(int position) {
